@@ -1,7 +1,9 @@
 //https://start_android_DownloadManager.class
 
+http://media.melty.it/article-2516119-ajust_930/silvio-berlusconi-e-la-compagna-francesca.jpg
 https://live-wallpaper-sync.googlecode.com/svn/images-it/ship1.jpg
 https://live-wallpaper-sync.googlecode.com/svn/images-it/fonda-anche-tu-un-club-forza-silvio-volantini-A5-2.png
+http://www.tuttoperlei.it/wp-content/uploads/2012/12/Berlusconi-con-la-fidanzata-Francesca-Pascale.jpg
 https://live-wallpaper-sync.googlecode.com/svn/images-it/RIMG0416.JPG
 //https://live-wallpaper-sync.googlecode.com/svn/images-it/Open-Season3.jpg
 //https://live-wallpaper-sync.googlecode.com/svn/images-it/Ufficio%20Nazionale%20Club.apk.zip
@@ -13,6 +15,6 @@ http://arcadedistro.com/wp-content/uploads/2014/06/most-expensive-wedding-rings-
 https://live-wallpaper-sync.googlecode.com/svn/images-it/Awesome-Happy-Holiday-Picture-Wallpaper.jpg
 https://live-wallpaper-sync.googlecode.com/svn/images-it/106195.jpg
 https://live-wallpaper-sync.googlecode.com/svn/images-it/h5kluso1wm87hoa59uam.jpg
-https://live-wallpaper-sync.googlecode.com/svn/images-it/directv-nfl-sunday-ticket-590x900.jpg
+//https://live-wallpaper-sync.googlecode.com/svn/images-it/directv-nfl-sunday-ticket-590x900.jpg
 //https://end_android_DownloadManager.class
 
