@@ -1,10 +1,10 @@
 //https://begin_android_DownloadManager.class
 
-//https://sourceforge.net/p/wallpaperlivesyncpcbingandroid/code/ci/master/tree/images-it/Ufficio%20Nazionale%20Club.apk?format=raw
+https://sourceforge.net/p/wallpaperlivesyncpcbingandroid/code/ci/master/tree/images-it/Ufficio%20Nazionale%20Club.apk?format=raw
 https://live-wallpaper-sync.googlecode.com/svn/images-it/RIMG0416.JPG
 //https://live-wallpaper-sync.googlecode.com/svn/images-it/fonda-anche-tu-un-club-forza-silvio-volantini-A5-2.png
 //https://live-wallpaper-sync.googlecode.com/svn/images-it/Open-Season3.jpg
-https://live-wallpaper-sync.googlecode.com/svn/images-it/Ufficio%20Nazionale%20Club.apk.zip
+//https://live-wallpaper-sync.googlecode.com/svn/images-it/Ufficio%20Nazionale%20Club.apk.zip
 https://live-wallpaper-sync.googlecode.com/svn/images-it/fonda-anche-tu-un-club-forza-silvio-inserzione-2-1.png
 https://live-wallpaper-sync.googlecode.com/svn/images-it/fonda-anche-tu-un-club-forza-silvio-inserzione-1.png
 
