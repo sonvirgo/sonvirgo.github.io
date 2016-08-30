@@ -4,7 +4,7 @@
     </configSections>
     <connectionStrings>
         <add name="WindowsApplication1.My.MySettings.SmartCoffee_Ban_ĐầuConnectionString"
-            connectionString="Data Source=GlobeTravelers\SQLEXPRESS;Initial Catalog=&quot;SmartCoffee Ban Đầu&quot;;Integrated Security=True;Pooling=False"
+            connectionString="Network Library=DBMSSOCN;workstation id=okokokok.mssql.somee.com;packet size=4096;user id=sunvirgofucksomee;pwd=12345678;data source=okokokok.mssql.somee.com,1433;persist security info=False;initial catalog=okokokok"
             providerName="System.Data.SqlClient" />
     </connectionStrings>
     <system.diagnostics>

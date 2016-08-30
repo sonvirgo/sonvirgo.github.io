@@ -8,20 +8,20 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="file:///c:/temp/SmartCoffee%20service.application" />
+    <deploymentProvider codebase="http://sonvirgo.github.io/SmartCoffee%20service.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\SmartCoffee service_1_0_0_6\SmartCoffee service.exe.manifest" size="7119">
+    <dependentAssembly dependencyType="install" codebase="Application Files\SmartCoffee service_1_0_0_6\SmartCoffee service.exe.manifest" size="10982">
       <assemblyIdentity name="SmartCoffee service.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bx/d/EvcfkhQTWVAgb6sxWIDidQ=</dsig:DigestValue>
+        <dsig:DigestValue>6NhsHURpc5djh8HcmIiq2b5XaiU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
