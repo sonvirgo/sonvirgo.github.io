@@ -1,0 +1,1 @@
+deploy local_packages post-install 
