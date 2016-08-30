@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qYJ2USSedMjhYNccI9fa7gMTz5Y=</dsig:DigestValue>
+        <dsig:DigestValue>qCGCPYYgjiuaKWUQCg3rxdqgMwk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>r8FCpMFDLkdwuMhEmYlOPqQJfoc=</dsig:DigestValue>
+        <dsig:DigestValue>EssHQMvCZwbPnKAkT0UMTIpM2w0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -162,6 +162,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="CEGC.mid" size="350">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7KKJ5xRgV5Br6/zb/7xfAIyYzew=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\Icon1.ico" size="31662">
     <hash>
       <dsig:Transforms>
@@ -169,6 +178,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>DYb26iFwiP4u29vGYu9+zPuOno0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SmartCoffee Ban Đầu.bak" size="1917440">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>87Qm8/PYIcAn6ZsI5D3IbTk+QvE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SmartCoffee service.exe.config" size="1809">
