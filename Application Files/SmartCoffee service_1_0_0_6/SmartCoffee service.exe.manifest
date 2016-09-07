@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="SmartCoffee service.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
-  <description asmv2:iconFile="Resources\Icon1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="SmartCoffee Service.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Scofe.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="SmartCoffee service" version="1.0.0.1" language="neutral" processorArchitecture="amd64" />
-    <commandLine file="SmartCoffee service.exe" parameters="" />
+    <assemblyIdentity name="SmartCoffee Service" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SmartCoffee Service.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClassLibrary1.dll" size="15872">
-      <assemblyIdentity name="ClassLibrary1" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClassLibrary1.dll" size="16384">
+      <assemblyIdentity name="ClassLibrary1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ws9VBR56o4GVfL9Qa6hsUZjO00Q=</dsig:DigestValue>
+        <dsig:DigestValue>HmOCZTitDgQ70GNGdzmfVhaP6X4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -139,26 +139,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmartCoffee service.exe" size="278016">
-      <assemblyIdentity name="SmartCoffee service" version="1.0.0.1" language="neutral" processorArchitecture="amd64" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmartCoffee Service.exe" size="247808">
+      <assemblyIdentity name="SmartCoffee Service" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XOOomVxC82Ol857Mq5Hau4Nyxe8=</dsig:DigestValue>
+        <dsig:DigestValue>GHC7CiQ6rzuJcABXvO/LOp7ZXog=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="32416">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DEMNeVVaj0AXJ5RbDj3Dzpuhu+o=</dsig:DigestValue>
+        <dsig:DigestValue>AHmV4Btjh8nkNFKrwg4p7Kvnz3E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -171,13 +171,22 @@
       <dsig:DigestValue>7KKJ5xRgV5Br6/zb/7xfAIyYzew=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\Icon1.ico" size="31662">
+  <file name="eula.txt" size="1769">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>DYb26iFwiP4u29vGYu9+zPuOno0=</dsig:DigestValue>
+      <dsig:DigestValue>pjPSksmZgweZRw5KHPuz322spjg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Scofe.ico" size="894">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xj9HMfIc5karkQTebeVU+UIOhFI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SmartCoffee Ban Đầu.bak" size="1917440">
@@ -189,13 +198,13 @@
       <dsig:DigestValue>87Qm8/PYIcAn6ZsI5D3IbTk+QvE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SmartCoffee service.exe.config" size="1809">
+  <file name="SmartCoffee Service.exe.config" size="1713">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>UxVpuxrzX5zM8KGodrkt1sh4694=</dsig:DigestValue>
+      <dsig:DigestValue>he7Fnst5jE+U8c2AvL6kCROmqbs=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
