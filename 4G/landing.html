@@ -20,7 +20,7 @@
         setTimeout(function() {
             if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
                 var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
-                window.frames["myFrame"].location = url;
+                window.frames["myFrame"].src = url;
             }
          
         }, 3000); // 3000 milliseconds = 3 seconds
