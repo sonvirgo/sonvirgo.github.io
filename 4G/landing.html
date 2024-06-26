@@ -2,7 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5; URL=https://github.com/sonvirgo/">
+ <script>
+        var acceptedWebsites =['https://m.cnn.com','https://m.youtube.com','https://duckduckgo.com/', 'https://coccoc.com/search','https://github.com/sonvirgo/','https://kevevn.vn/','https://dangcongsan.vn/'];
+        // Simulate a delay before redirecting (5 seconds in this example)
+        setTimeout(function() {
+            if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
+                var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
+                document.getElementById("myFrame").src = url;
+            }
+         
+        }, 1000); // 3000 milliseconds = 3 seconds
+    </script>
+
     <title>Welcome Page</title>
 </head>
 <body>
@@ -14,17 +25,6 @@
 <p></p>
 <p>Lưu ý 1 số đối tượng ăn cắp 1 SNI, sẽ bị khóa dùng Termux, HC, INPV...</p>
 <iframe  name="myFrame" sandbox="allow-navigation allow-same-origin allow-scripts allow-forms" src="https://github.com/sonvirgo/"; </iframe>
-    <script>
-        var acceptedWebsites =['https://m.cnn.com','https://m.youtube.com','https://duckduckgo.com/', 'https://coccoc.com/search','https://github.com/sonvirgo/','https://kevevn.vn/','https://dangcongsan.vn/'];
-        // Simulate a delay before redirecting (5 seconds in this example)
-        setTimeout(function() {
-            if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
-                var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
-                document.getElementById("myFrame").src = url;
-            }
-         
-        }, 1000); // 3000 milliseconds = 3 seconds
-    </script>
-</body>
+   </body>
 </html>
 
