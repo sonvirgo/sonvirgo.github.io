@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome Page</title>
-    <meta http-equiv='refresh' content='0; URL=https://www.youtube.com/shorts/MIWIhPyjMy8'>
+    <meta http-equiv='refresh' content='3; URL=https://www.youtube.com/shorts/MIWIhPyjMy8'>
 </head>
 <body>
     <p     style=  '     text-align:center;  margin: auto'     ><a style=  '           ;color:brown; !important;' href= 'https://github.com/sonvirgo/4G-Circumvent'   >VirgoSun +84-387554874</a> <b style='color:purple; !important;'>Thanks to beloved Paid customers!</b></p>
@@ -15,15 +15,18 @@
     <script>
         var acceptedWebsites =['https://bongda24h.vn/euro-c363-p1.html','https://tieudung.kinhtedothi.vn/thi-truong.html','https://vietlott.vn/','https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html','https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay','https://kevevn.vn/','https://sjc.com.vn/giavang/textContent.php'];
         // Simulate a delay before redirecting (5 seconds in this example)
-  
-         setTimeout(function() {
+          function randomIntFromInterval(1, 6) { // min and max included 
+              return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+          const rndInt = randomIntFromInterval(1, 6)*1000;
+          setTimeout(function() {
             if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
                 var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
                 document.getElementById("myFrame").src = url;
                 document.getElementById('myFrame').src = document.getElementById('myFrame').src;
-            }
+                }
          
-        }, 1000); // 3000 milliseconds = 3 seconds
+           }, rndInt); // 3000 milliseconds = 3 seconds
    
     </script>
 </body>
