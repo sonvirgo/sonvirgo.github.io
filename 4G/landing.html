@@ -6,7 +6,7 @@
    
     <script>
         var rfr = false
-        var MacceptedWebsites =['https://www.youtube.com/shorts/MIWIhPyjMy8','https://m.cnn.com','https://vnexpress.net/','https://www.tiktok.com/@jenbarangan/video/7323475642471812357?lang=en'];
+        var MacceptedWebsites =['https://www.youtube.com/shorts/ROyzvw2kxgk','https://www.youtube.com/shorts/MIWIhPyjMy8','https://m.cnn.com','https://vnexpress.net/','https://www.tiktok.com/@jenbarangan/video/7323475642471812357?lang=en'];
         // Simulate a delay before redirecting (5 seconds in this example)
           function MrandomIntFromInterval(min, max) { // min and max included 
               return Math.floor(Math.random() * (max - min + 1) + min);
@@ -16,11 +16,11 @@
             if ( MacceptedWebsites.indexOf(document.location.href) == -1 ) {
                 var url = MacceptedWebsites[Math.floor(Math.random()*MacceptedWebsites.length)];
               //  if (rfr == false) {
-                window.location.replace('https://www.youtube.com/shorts/ROyzvw2kxgk');   //(url);
+                window.location.replace(url);
                // }
               }
          
-           }, 0); //MrndInt); // 3000 milliseconds = 3 seconds
+           },MrndInt); // 3000 milliseconds = 3 seconds
    
     </script>
     
