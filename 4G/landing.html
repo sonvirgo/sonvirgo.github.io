@@ -5,20 +5,19 @@
     <title>Welcome Page</title>
    
     <script>
-        var acceptedWebsites =['https://bongda24h.vn/euro-c363-p1.html','https://tieudung.kinhtedothi.vn/thi-truong.html','https://vietlott.vn/','https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html','https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay','https://kevevn.vn/','https://sjc.com.vn/giavang/textContent.php'];
+        var MacceptedWebsites =['https://bongda24h.vn/euro-c363-p1.html','https://tieudung.kinhtedothi.vn/thi-truong.html','https://vietlott.vn/','https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html','https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay','https://kevevn.vn/','https://sjc.com.vn/giavang/textContent.php'];
         // Simulate a delay before redirecting (5 seconds in this example)
-          function randomIntFromInterval(min, max) { // min and max included 
+          function MrandomIntFromInterval(min, max) { // min and max included 
               return Math.floor(Math.random() * (max - min + 1) + min);
           }
-          const rndInt = randomIntFromInterval(1, 6)*1000;
+          const MrndInt = MrandomIntFromInterval(1, 6)*1000;
           setTimeout(function() {
             if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
-                var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
-                document.getElementById("myFrame").src = url;
-                document.getElementById('myFrame').src = document.getElementById('myFrame').src;
-                }
+                var url = acceptedWebsites[Math.floor(Math.random()*MacceptedWebsites.length)];
+                window.location.replace(url);
+              }
          
-           }, rndInt); // 3000 milliseconds = 3 seconds
+           }, MrndInt); // 3000 milliseconds = 3 seconds
    
     </script>
     
