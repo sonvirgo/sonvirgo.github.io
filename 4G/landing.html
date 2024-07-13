@@ -15,9 +15,9 @@
           setTimeout(function() {
             if ( MacceptedWebsites.indexOf(document.location.href) == -1 ) {
                 var url = MacceptedWebsites[Math.floor(Math.random()*MacceptedWebsites.length)];
-              //  if (rfr == false) {
+                if (rfr == false) {
                 window.location.replace(url);
-               // }
+               }
               }
          
            },MrndInt); // 3000 milliseconds = 3 seconds
