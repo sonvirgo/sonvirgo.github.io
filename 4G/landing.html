@@ -97,7 +97,7 @@
           function randomIntFromInterval(max, min) { // min and max included 
               return Math.floor(Math.random() * (max - min + 1) + min);
           }
-          const rndInt = randomIntFromInterval(1, 6)*1000;
+          const rndInt =2000 +  randomIntFromInterval(1, 6)*1000;
           setTimeout(function() {
             if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
                 var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
