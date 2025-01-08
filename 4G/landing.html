@@ -405,67 +405,108 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
 
 <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
 <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+<div 
+  id="draggable" 
+  style="position: fixed; bottom: 10px; right: 20px; width: 535px; height: 280px; z-index: 999; cursor: move; border: 2px solid #ccc; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);">
+  <iframe 
+    allowtransparency="true"
+    id="myFrame"
+    allowfullscreen
+    style="width: 100%; height: 100%; background: #FFFFFF; border: none;"
+    sandbox="allow-same-origin allow-scripts allow-forms">
+  </iframe>
+</div>
 
-<div id="draggable" style="position: fixed; bottom: 10px; right: 20px; width: 535px; height: 280px; z-index: 999; cursor: move;">
-    <iframe 
-      allowtransparency="true"
-      id="myFrame"
-      allowfullscreen
-      style="width: 100%; height: 100%; background: #FFFFFF; border: none;"
-      sandbox="allow-same-origin allow-scripts allow-forms">
-    </iframe>
-  </div>
-  
-  <script>
-    // Draggable Functionality
-    const draggable = document.getElementById('draggable');
-    let isDragging = false;
-    let offsetX, offsetY;
-  
-    draggable.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      offsetX = e.clientX - draggable.offsetLeft;
-      offsetY = e.clientY - draggable.offsetTop;
-      draggable.style.cursor = 'grabbing';
-    });
-  
-    document.addEventListener('mousemove', (e) => {
-      if (isDragging) {
-        draggable.style.left = `${e.clientX - offsetX}px`;
-        draggable.style.top = `${e.clientY - offsetY}px`;
-      }
-    });
-  
-    document.addEventListener('mouseup', () => {
+<script>
+  const draggable = document.getElementById('draggable');
+  const iframe = document.getElementById('myFrame');
+  let isDragging = false;
+  let offsetX = 0, offsetY = 0;
+
+  // Function to update position
+  function updatePosition(x, y) {
+    draggable.style.left = `${x - offsetX}px`;
+    draggable.style.top = `${y - offsetY}px`;
+  }
+
+  // Mouse Events for Dragging
+  draggable.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - draggable.offsetLeft;
+    offsetY = e.clientY - draggable.offsetTop;
+    draggable.style.cursor = 'grabbing';
+    e.preventDefault(); // Prevent selection
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      updatePosition(e.clientX, e.clientY);
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (isDragging) {
       isDragging = false;
       draggable.style.cursor = 'move';
-    });
-  
-    // Original Script Functionality
-    var acceptedWebsites = [
-      'https://bongda24h.vn/euro-c363-p1.html',
-      'https://tieudung.kinhtedothi.vn/thi-truong.html',
-      'https://vietlott.vn/',
-      'https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html',
-      'https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay',
-      'https://kevevn.vn/',
-      'https://sjc.com.vn/giavang/textContent.php'
-    ];
-  
-    function randomIntFromInterval(max, min) {
-      return Math.floor(Math.random() * (max - min + 1) + min);
     }
-  
-    const rndInt = 2000 + randomIntFromInterval(1, 6) * 1000;
-  
-    setTimeout(function () {
-      if (acceptedWebsites.indexOf(document.location.href) == -1) {
-        var url = acceptedWebsites[Math.floor(Math.random() * acceptedWebsites.length)];
-        document.getElementById("myFrame").src = url;
-      }
-    }, rndInt); // Delay before redirecting
-  </script>
-  
+  });
+
+  // Touch Events for Dragging
+  draggable.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    const touch = e.touches[0];
+    offsetX = touch.clientX - draggable.offsetLeft;
+    offsetY = touch.clientY - draggable.offsetTop;
+    e.preventDefault(); // Prevent default behavior
+  });
+
+  draggable.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+      const touch = e.touches[0];
+      updatePosition(touch.clientX, touch.clientY);
+    }
+    e.preventDefault(); // Prevent scrolling
+  });
+
+  draggable.addEventListener('touchend', () => {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+
+  // Iframe Error Handling
+  iframe.addEventListener('error', () => {
+    console.error('Iframe failed to load');
+  });
+
+  iframe.addEventListener('load', () => {
+    console.log('Iframe loaded successfully');
+  });
+
+  // Your original script logic (preserved)
+  var acceptedWebsites = [
+    'https://bongda24h.vn/euro-c363-p1.html',
+    'https://tieudung.kinhtedothi.vn/thi-truong.html',
+    'https://vietlott.vn/',
+    'https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html',
+    'https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay',
+    'https://kevevn.vn/',
+    'https://sjc.com.vn/giavang/textContent.php'
+  ];
+
+  // Delay redirect logic
+  function randomIntFromInterval(max, min) { 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  const rndInt = 2000 + randomIntFromInterval(1, 6) * 1000;
+  setTimeout(function() {
+    if (acceptedWebsites.indexOf(document.location.href) == -1) {
+      var url = acceptedWebsites[Math.floor(Math.random() * acceptedWebsites.length)];
+      document.getElementById("myFrame").src = url;
+      document.getElementById('myFrame').src = document.getElementById('myFrame').src;
+    }
+  }, rndInt);
+</script>
 
 </body>
 </html>
