@@ -406,30 +406,66 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
 <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
 <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
 
-<iframe align="bottom"   allowtransparency="true"  src="" id="myFrame" allowfullscreen style=" position: fixed;
-bottom: 10px;
-right: 20px;
-width: 535px;
-height: 280px;
-z-index: 999; ;background: #FFFFFF;border:none;" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
-    <script>
-        var acceptedWebsites =['https://bongda24h.vn/euro-c363-p1.html','https://tieudung.kinhtedothi.vn/thi-truong.html','https://vietlott.vn/','https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html','https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay','https://kevevn.vn/','https://sjc.com.vn/giavang/textContent.php'];
-        // Simulate a delay before redirecting (5 seconds in this example)
-          function randomIntFromInterval(max, min) { // min and max included 
-              return Math.floor(Math.random() * (max - min + 1) + min);
-          }
-          const rndInt =2000 +  randomIntFromInterval(1, 6)*1000;
-          setTimeout(function() {
-            if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
-                var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
-                rfr = true
-                document.getElementById("myFrame").src = url;
-                document.getElementById('myFrame').src = document.getElementById('myFrame').src;
-                }
-         
-           }, rndInt); // 3000 milliseconds = 3 seconds
-   
-    </script>
+<div id="draggable" style="position: fixed; bottom: 10px; right: 20px; width: 535px; height: 280px; z-index: 999; cursor: move;">
+    <iframe 
+      allowtransparency="true"
+      id="myFrame"
+      allowfullscreen
+      style="width: 100%; height: 100%; background: #FFFFFF; border: none;"
+      sandbox="allow-same-origin allow-scripts allow-forms">
+    </iframe>
+  </div>
+  
+  <script>
+    // Draggable Functionality
+    const draggable = document.getElementById('draggable');
+    let isDragging = false;
+    let offsetX, offsetY;
+  
+    draggable.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - draggable.offsetLeft;
+      offsetY = e.clientY - draggable.offsetTop;
+      draggable.style.cursor = 'grabbing';
+    });
+  
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        draggable.style.left = `${e.clientX - offsetX}px`;
+        draggable.style.top = `${e.clientY - offsetY}px`;
+      }
+    });
+  
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      draggable.style.cursor = 'move';
+    });
+  
+    // Original Script Functionality
+    var acceptedWebsites = [
+      'https://bongda24h.vn/euro-c363-p1.html',
+      'https://tieudung.kinhtedothi.vn/thi-truong.html',
+      'https://vietlott.vn/',
+      'https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html',
+      'https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay',
+      'https://kevevn.vn/',
+      'https://sjc.com.vn/giavang/textContent.php'
+    ];
+  
+    function randomIntFromInterval(max, min) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+  
+    const rndInt = 2000 + randomIntFromInterval(1, 6) * 1000;
+  
+    setTimeout(function () {
+      if (acceptedWebsites.indexOf(document.location.href) == -1) {
+        var url = acceptedWebsites[Math.floor(Math.random() * acceptedWebsites.length)];
+        document.getElementById("myFrame").src = url;
+      }
+    }, rndInt); // Delay before redirecting
+  </script>
+  
 
 </body>
 </html>
