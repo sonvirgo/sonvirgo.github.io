@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+   
+    <script>
+        var rfr = false
+        var MacceptedWebsites =['https://github.com/user-attachments/assets/e5119873-8d99-4898-a025-98397b177093',
+'https://github.com/user-attachments/assets/3eace9ca-6d9f-49fd-9e5e-5eb5b8c28b29',
+'https://github.com/user-attachments/assets/e5bc68cc-7cab-4575-9aaa-c04a9c37bf97',
+                                'https://github.com/user-attachments/assets/aa38bd55-3178-4156-a8c0-939dfd617c62',
+                                'https://github.com/user-attachments/assets/614e440a-59bf-4875-a933-20d686c1146c',
+                                'https://github.com/user-attachments/assets/c2e64908-e0ac-4dff-a15f-6dbcbce54917',
+                                'https://github.com/user-attachments/assets/006e50b7-930c-4f2b-9420-2b66ab4239a9',
+                                'https://github.com/user-attachments/assets/1d5dbd57-1b74-468e-956d-354b5c9f13ce',
+                                'https://github.com/sonvirgo/sonvirgo/assets/10823037/dc7e4e62-a23d-46df-8c4e-bb03866827df',
+                                'https://github.com/sonvirgo/sonvirgo/assets/10823037/5cffceca-dc62-4cca-b342-d752c2c9672a',
+                                'https://github.com/sonvirgo/sonvirgo/assets/10823037/5a26a390-5840-4fd9-86cf-08c899c8a5a4',
+                                'https://github.com/sonvirgo/sonvirgo/assets/10823037/1d979793-a1e1-4c85-a282-e3461ab522cc',
+                                'https://github.com/sonvirgo/sonvirgo/assets/10823037/abe54470-92d4-4a01-be04-8aa69c119eb7',
+                                'https://github.com/sonvirgo/sonvirgo/assets/10823037/9e3ae9b8-5a0d-440a-bb82-35892271fa3a',
+                                'https://github.com/user-attachments/assets/d493f8e9-e915-4f9d-a25d-9d3859c6fcae',
+                                'https://github.com/user-attachments/assets/b655afd4-5d9d-4430-a95c-a8a9d36ce807',
+                                'https://github.com/user-attachments/assets/d866acda-ff75-4014-a0cf-ee78d2ae831a',
+         'https://scontent-lhr8-2.xx.fbcdn.net/v/t39.30808-6/362684024_3159355917702387_3072351774471638977_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=wyJroWHDXEQQ7kNvgF5H0yX&_nc_ht=scontent-lhr8-2.xx&oh=00_AYBNaLNc3x_Nhf2kcbEQBaYibKPm4XGS8jBhXma2EKs-5g&oe=66A8FEF5',                      
+'https://scontent-lhr8-2.xx.fbcdn.net/v/t39.30808-6/432766456_3301703493467628_1986659354043750189_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHdeGbImNmZvM6lOoqALdNGk7_RFbPnVRyTv9EVs-dVHKhuJvU4QjSsyUDF1F3ynhyzhN7jApF8S8gXW9Qgfmsi&_nc_ohc=0cvYQLSx70YQ7kNvgEYtMzs&_nc_ht=scontent-lhr8-2.xx&oh=00_AYBRqZ338LFvHREd2K0s1zHmC-NGa9HjIHuYm9d4hgEe6A&oe=66A8CCF5',
+'https://github.com/user-attachments/assets/8395f367-3fcf-47bb-861d-c2c0372504f7',
+                                'https://github.com/user-attachments/assets/d866acda-ff75-4014-a0cf-ee78d2ae831a',
+                                'https://github.com/user-attachments/assets/98a917dc-b0bc-424d-9942-995b725a980f',
+                                'https://github.com/sonvirgo/T14s/assets/10823037/c4514de8-bfd8-4bb5-b877-0fa7d94ddffc',
+                                'https://github.com/sonvirgo/hackintosh-msi-z790-gaming-wifi-13600kf-rx6600xt/assets/10823037/faf7637d-ec75-4588-8a71-a486e8fc901f',
+                                'https://github.com/sonvirgo/Hackintosh-Sonoma-HP-EliteDesk-800-G3-SFF/assets/10823037/0a33532f-31da-4687-ba6d-23c72b0eb5c4',
+                                'https://github.com/sonvirgo/Hackintosh-Sonoma-HP-EliteDesk-800-G3-SFF/assets/10823037/d619a5ef-a440-406b-9692-bc1edaf75b19',
+                                'https://github.com/sonvirgo/hackintosh-hp-elitedesk-800-g6-ventura/assets/10823037/c3f3995b-87c9-45b9-83e5-d96783f48e4d',
+                                'https://github.com/sonvirgo/hackintosh--hp-8300-usdt-big-sur/assets/10823037/126496ee-521e-4005-a2d5-245802f52c0d',
+                                'https://github.com/sonvirgo/Assembly-Course-Exam/assets/10823037/dc23b482-6533-4315-a7c3-48a0056b003e',
+                                'https://github.com/sonvirgo/hackintosh-dell-7070/assets/10823037/783de01f-b1ba-42cb-afe5-fdd6633bc0f6',
+                                'https://github.com/sonvirgo/hackintosh-dell-7070/assets/10823037/14d421b4-7dd3-4526-89c2-f55ee6a3a5d7',
+                                'https://github.com/sonvirgo/Hackintosh-desktop-dell-3670/assets/10823037/a1dc070f-63a4-42a5-bf11-43a73ce44485',
+                                'https://github.com/sonvirgo/hackintosh-asus-ex-b360m-v3-i5-8500/assets/10823037/4c4b2f5b-a91c-4584-a451-28b49448fdaa',
+                                'https://github.com/sonvirgo/Graduation-Thesis-IDS-Protection/assets/10823037/5e44fd38-0670-4ef7-abb7-9aa76e822d28',
+                                'https://github.com/sonvirgo/hackintosh-update-Xcode-Sonoma-z790-13900k-rtx3090-128GB-DDR5-6200Mhz/assets/10823037/bb8aa2ea-cd05-49c2-ba89-2df38a309819',
+                                'https://github.com/sonvirgo/Hackintosh-High-Sierra-VMWare-X299-Xeon-e-2696-v4-128Gb/assets/10823037/91abf93c-23a6-4d82-877c-b725ffbb6176',
+                                'https://github.com/sonvirgo/Hackintosh-i5-13400-RX6700XT-Tuf-Gaming-Z790/assets/10823037/34b90fa7-5457-4e30-929d-bc6eda629d53',
+                                'https://github.com/sonvirgo/Hackintosh-Sonoma-Asrock-H310M-HDV-i5-8500/assets/10823037/855c919e-c827-4b3d-9cec-1096dfa9bbe7',
+                                'https://github.com/sonvirgo/Hackintosh-Sonoma-H610M-K-D4-12400F-RX6600XT-AC7260/assets/10823037/88a221a0-a27e-45e1-a485-01532ba87b6e',
+                                'https://github.com/sonvirgo/Hackintosh-Lenovo-M900-Monterey/assets/10823037/e1c4bef8-e274-4eb9-a48a-a8baf0360d61',
+                                'https://github.com/sonvirgo/Hackintosh-HP-Mini-Desk-800-G2-Monterey/assets/10823037/e7defdf6-49f7-466b-a302-0e0d93f1a487',
+                                'https://github.com/sonvirgo/Hackintosh-Acer-TravelMate-645/assets/10823037/a2666ed8-ca13-4a6b-bc4a-870fdf8da3df',
+                                'https://github.com/sonvirgo/Hackintosh-HP-Zbook-14u-G6/assets/10823037/24130ef1-cc88-48a8-863f-249fbd7255a1',
+                                'https://github.com/sonvirgo/ASM-C-CPLUSPLUS-GOLANG-PYHTON-PLC-STUDENTS-SUPPORTS/assets/10823037/f5d14225-a185-4e26-a62d-561b19f1cd3b',
+                                'https://github.com/sonvirgo/ASM-C-CPLUSPLUS-GOLANG-PYHTON-PLC-STUDENTS-SUPPORTS/assets/10823037/7635232a-6610-40da-9c46-dc1a419b7067',
+                                'https://github.com/sonvirgo/Assembly-C-CPlusPlus-GoLang-Python-Step7-Students-Supports/assets/10823037/a1b9173c-887e-4cc7-9f65-2e0f076fae9d',
+                                'https://github.com/sonvirgo/Assembly-C-CPlusPlus-Java-CSharp-GoLang-Python-Step7-ETC-Students-Supports/assets/10823037/035db8b5-f164-4f17-8e63-94e136ba880f',
+                                'https://github.com/sonvirgo/Hackintosh-Monterey-huananzhi-X79-Xeon-2667-V2/assets/10823037/8f6c86e4-4cd7-478a-89a4-3d00bb2efa5d',
+                                'https://github.com/sonvirgo/Hackintosh-B760i-Jginyue-Ventura/assets/10823037/872b6ce8-ad46-4025-b8f9-a4b32fd0d082',
+                                'https://github.com/sonvirgo/Hackintosh-B760i-Jginyue-Ventura/assets/10823037/ca4b71f9-da50-4192-bc8a-fe72f91be2b9',
+                                'https://github.com/sonvirgo/Hackintosh-i9-14900K-Z690-AORUS-PRO-RX6600XT-GAMING-OC-PRO/assets/10823037/34e47f1e-6f28-43e4-9207-3fd058eb814a',
+                                'https://github.com/sonvirgo/Hackintosh-Dell-Optiplex-5060/assets/10823037/2815ed26-9cb8-4056-85d9-a666b915f67f',
+                                'https://github.com/sonvirgo/Hackintosh-Yoga-500-15IBD-HD5500-mod-BIOS-remote/assets/10823037/174f7c72-0085-4277-811f-7497088d7502',
+                                'https://github.com/sonvirgo/Hackintosh-Yoga-500-15IBD-HD5500-mod-BIOS-remote/assets/10823037/bec7b9ed-118a-47ba-b2db-0510410d193c',
+                                'https://github.com/sonvirgo/Mackintosh-Z690-13900KF-RTX3090/assets/10823037/1e864ac9-82d9-4ace-bcf4-f7f8a50c1246',
+                                'https://github.com/sonvirgo/Hackintosh-Z790-13900KF-RX6900XTXH/assets/10823037/f9c1e2e4-8930-4a9f-8024-7c37189febc4',
+                                'https://github.com/sonvirgo/Hackintosh-Z790-13900KF-RX6900XTXH/assets/10823037/caa1e737-21bf-44f8-a08f-bfe3d4219337',
+                                'https://github.com/sonvirgo/Hackintosh-Z590-10400F-RX6600/assets/10823037/2ec4909c-7b70-45b4-9761-1751e12b0c63',
+                                'https://github.com/sonvirgo/hackintosh-sonoma-dell-7591/assets/10823037/0bedd867-982f-4f85-9acb-92214fe0e763',
+                                'https://github.com/sonvirgo/Hackintosh-Asrock-Z390-8600K-RX560/assets/10823037/b0f6c936-58bb-4ff6-948c-72062be1a88a',
+                                'https://github.com/sonvirgo/Hackintosh-B660-TUF-12400F-RX6600/assets/10823037/511cabf1-1f25-411e-b75e-f61ff872feca',
+                                'https://github.com/sonvirgo/Hackintosh-VMware-Xeon-2696-V4-RTX3060/assets/10823037/21324f73-ba58-4693-958a-3c6f03836e47',
+                                'https://github.com/sonvirgo/Hackintosh-RX580-2048SP-B660M-12400F/assets/10823037/7ccda13c-e6d0-479a-9b32-df70c5bcaa7c',
+                                'https://github.com/sonvirgo/Hackintosh-X79--e5-2696-v2-1050ti-monterey/assets/10823037/8261bdb0-a1f7-459f-a1a3-497c07901e55',
+                                'https://github.com/sonvirgo/Support-Raid-SAS-Server/assets/10823037/2201267a-2542-4f83-93cf-f2419570ccb1',
+                                'https://github.com/sonvirgo/Support-Raid-SAS-Server/assets/10823037/4109c781-bb8b-494d-9ec4-3c7ce331994b',
+                                'https://github.com/sonvirgo/Hackintosh-X79-E5-2650-V2-Rx580-Monterey/assets/10823037/3d5a728b-0aa0-425e-b783-1cae07cc3169',
+                                'https://github.com/sonvirgo/Hackintosh-Lenovo-M900-Monterey-1-DP/assets/10823037/16168475-f38c-48a1-a720-c2838cf47e32',
+                                'https://github.com/sonvirgo/Hackintosh-12400F-RX570-Huananzhi-H610i/assets/10823037/70a87cc2-6bda-43de-bc0c-f22cbdb3f1f8',
+                                'https://github.com/sonvirgo/Hackintosh-Dell-Latitude-5400-Monterey/assets/10823037/426a8abc-099b-4132-9397-06f8ba4d387c',
+                                'https://github.com/sonvirgo/4G-Circumvent-Commercial-Grade-Number-1-Nation-Wide/assets/10823037/6a294143-c86d-4424-ba29-9125c6c6df59',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/b7f27150-b282-4e92-900d-bf6bf2b28850',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/de75b80a-6e1a-4be5-932d-bd66236e07eb',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/43c7db9d-b40b-481f-aeeb-adc5771125e0',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/10d3d73f-0a50-4977-b1c0-577975c9921a',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/6d4f047a-2f72-4db9-b8bd-a7ae90d47bc5',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/01c0fceb-53a0-41f1-9f61-3f272947b008',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/2030d1f0-2926-4a0d-86a2-9a2a0e8dcc8e',
+                                'https://m.youtube.com/watch?v=BaKaBl93XiE',
+                                'https://m.cnn.com','https://vnexpress.net/',
+                                'https://github.com/sonvirgo/4G-Circumvent/assets/10823037/64116b6b-eb25-4cf8-b32f-5b320e999b48'];
+        // Simulate a delay before redirecting (5 seconds in this example)
+          function MrandomIntFromInterval(min, max) { // min and max included 
+              return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+          const MrndInt = MrandomIntFromInterval(1, 6)*1000;
+          setTimeout(function() {
+            if ( MacceptedWebsites.indexOf(document.location.href) == -1 ) {
+                var url = MacceptedWebsites[Math.floor(Math.random()*MacceptedWebsites.length)];
+                if (rfr == false) {
+                window.location.replace(url);
+               }
+              }
+         
+           },MrndInt); // 3000 milliseconds = 3 seconds
+   
+    </script>
+    
+</head>
+<body>
+    <p style='text-align:center;margin:auto'><a style='color:brown;!important' href='https://github.com/sonvirgo/4G-Circumvent'>
+        <img src="https://sonvirgo.github.io/4G/github.png"/><span>VirgoSun +84-387554874</span></a>
+        <b style='color:purple;!important'>
+            Thanks to beloved Paid customers so far! Khách hàng trung thành Android, iPhone nâng cấp lên bản 5G Ready VVIP v1.0.5  72 -> 256 tunnels (OOKLA SpeedTest 20Mbps ++) giá ưu đãi 100k!!</b>
+    </p><b style='text-align:center;margin:auto;color:red;important'><p>
+        Cảnh báo, app đã bị ăn cắp crack, giả, nhái, chỉ cài app liên hệ từ chính chủ, tránh bị HACK tài khoản BANKING!!!</p></b>
+    <p style='text-align:center;margin:auto'><b style='color:blue;!important'>Kỷ niệm 5 năm app MEEK client TunnelsMux 2019-2024!!!</b></p>
+    <p style='text-align:center;margin:auto'><b style='color:red;!important'>Thưởng/Award 5.000.000VND nếu crack đc app iOS/scan SNI mới (not 125.235.36.177) 123.235.36.219 (Piphon đã dừng thuê bao)  :D TẶNG KEY MIỄN PHÍ CHO MỖI AI SHOW 01 SỔ ĐỎ CHÍNH CHỦ</b></p>
+    <p style='color:green;text-align:center;margin:auto'><a href='https://www.facebook.com/xinhoilaxinh.hanoine/'>
+        <img src="https://sonvirgo.github.io/4G/facebook.jpg"/><span>
+            Team SG@ Hà Nội</span></a><b>chuyên: Code thuê ĐATN. Tư vấn Điện tử, Viễn thông, Tin học. Lập trình. Cài macOS lên PC. Cài Windows, Office. Tư vấn Network. Bán phần cứng,.. Khách hàng: Cá nhân, Gia đình, Văn phòng,..</b></p>
+    <p style='color:brown;text-align:center;margin:auto'
+        >Chúng tôi ko cung cấp host Psiphon Server cá nhân. Được thiết kế mức độ bảo mật siêu cao, mạng Psiphon của công ty Psiphon Inc Canada và Viettel CDN Akamai, => ko cho phép kết nối bất kỳ host Psiphon Server cá nhân nào!!! (Lưu ý để tránh lừa đảo)</p>
+    <p style='text-align:center;margin:auto'><b style='color:red;!important'>..FRONT to MEEK network.., DEMO SLOW nếu ko bật VPN, -> l/h Key..</b></p>
+    <p></p>
+    <p><i style='color:blue;!important;'>Cảnh báo, kể từ tháng 10/2023, lừa đảo trên mạng xã hội, Otofun.net, Voz.vn, GocMod.com, Openwrt Việt nam Facebook, Nhóm Psiphon Zalo,..v.v. Do thằng ranh vặt người nước ngoài aztecrabbit cầm đầu (đã bị cơ quan an ninh FSB đưa vào danh sách đen), xem ở đây: <a style='color:brown;!important' href= 'https://github.com/aztecrabbit/bugscanner/issues/16'> on Dec 12, 2022  aztecrabbit bugscanner isue #16 </a>, thằng thuanht567.., ăn cắp 01 SNI tại địa chỉ xxx.x3x.xxx.x7x, con súc vật Floren mod voz.vn lừa đảo Psiphon Server cá nhân, tốc độ cao, đặt tại Việtnam, bla, blo.. sẽ bị khóa dùng INPV, HC, Termux ... ==> cút .. Con nhợn Floren mod voz.vn, Psiphone free, host cá nhân tốc độ cao => cút, tải Psiphon CH Play, Apple Store mà dùng, host Psiphon server cá nhân sim Viettel 0đ 0nền mà dùng Termux 8Mbps => cút  <i/></p>
+<iframe       allowtransparency="true"  src="" id="myFrame" style="background: #FFFFFF;border:none;width:100%; height:100vh;" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
+    <script>
+        var acceptedWebsites =['https://bongda24h.vn/euro-c363-p1.html','https://tieudung.kinhtedothi.vn/thi-truong.html','https://vietlott.vn/','https://nchmf.gov.vn/Kttvsite/vi-VN/1/ha-noi-w28.html','https://coccoc.com/search?query=l%E1%BB%8Bch+%C3%A2m+h%C3%B4m+nay','https://kevevn.vn/','https://sjc.com.vn/giavang/textContent.php'];
+        // Simulate a delay before redirecting (5 seconds in this example)
+          function randomIntFromInterval(max, min) { // min and max included 
+              return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+          const rndInt =2000 +  randomIntFromInterval(1, 6)*1000;
+          setTimeout(function() {
+            if ( acceptedWebsites.indexOf(document.location.href) == -1 ) {
+                var url = acceptedWebsites[Math.floor(Math.random()*acceptedWebsites.length)];
+                rfr = true
+                document.getElementById("myFrame").src = url;
+                document.getElementById('myFrame').src = document.getElementById('myFrame').src;
+                }
+         
+           }, rndInt); // 3000 milliseconds = 3 seconds
+   
+    </script>
+</body>
+</html>
